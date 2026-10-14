@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/data/">
 		<Project Path="src/Amiasea.Enterprise.Data.Core/Amiasea.Enterprise.Data.Core.csproj" />
+    <Project Path="test/Amiasea.Enterprise.Data.Core.Test/Amiasea.Enterprise.Data.Core.Test.csproj" />
 	</Folder>
 </Solution>

@@ -7,6 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="GreenDonut.Data.EntityFramework" Version="16.6.8" />
+    <PackageReference Include="HotChocolate.Types.CursorPagination" Version="16.6.8" />
+    <PackageReference Include="HotChocolate.Types.CursorPagination.Extensions" Version="16.6.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="11.0.0-rc.1.26425.128" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="11.0.0-rc.1.26425.128">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -16,6 +19,15 @@
     <PackageReference Include="GreenDonut" Version="16.6.8" />
     <PackageReference Include="HotChocolate.Types.Analyzers" Version="16.6.8" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="11.0.0-rc.1.26425.128" />
+    <PackageReference Include="WolverineFx" Version="6.49.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(Configuration)' == 'Debug'">
+    <ProjectReference Include="..\..\..\..\contract\core\src\Amiasea.Enterprise.Contract.Core\Amiasea.Enterprise.Contract.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(Configuration)' == 'Release'">
+    <PackageReference Include="Amiasea.Enterprise.Contract.Core" Version="" />
   </ItemGroup>
 
 </Project>
